@@ -1,0 +1,42 @@
+<?php
+
+namespace Mastrota\CoreBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+/**
+ * Pigna
+ *
+ * @ORM\Table(name="pigna")
+ * @ORM\Entity(repositoryClass="Mastrota\CoreBundle\Repository\PignaRepository")
+ */
+class Pigna
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+
+
+    /**
+     * Get Title
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getTitle();
+    }
+}

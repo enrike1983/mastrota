@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="sonata.admin.pigna" class="Mastrota\AdminBundle\Admin\PignaAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Pigna" label="Pigna"/>
+            <argument />
+            <argument>Mastrota\CoreBundle\Entity\Pigna</argument>
+            <argument />
+            <!--<call method="setTranslationDomain">
+                <argument>MastrotaCoreBundle</argument>
+            </call> -->
+        </service>
+    </services>
+
+</container>
